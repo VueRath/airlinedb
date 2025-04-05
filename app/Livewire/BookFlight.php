@@ -6,10 +6,12 @@ use Livewire\Component;
 use App\Models\Flight;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Attributes\Layout;
 
 class BookFlight extends Component
 {
     public $flight_id;
+    #[Layout('layouts.app')]
 
     public function bookFlight()
     {
@@ -25,7 +27,9 @@ class BookFlight extends Component
 
     public function render()
     {
-        $flights = Flight::all();
-        return view('livewire.book-flight', compact('flights'));
+        return view('livewire.book-flight',
+        [
+            'flights' => Flight::all()
+        ] );
     }
 }
