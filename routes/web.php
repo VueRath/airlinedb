@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\BookFlight;
+use App\Livewire\Create\CreateBooking;
 use App\Livewire\ViewFlights;
 
 Route::get('/', function () {
@@ -16,6 +17,9 @@ Route::get('/dashboard', function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/book-flight', BookFlight::class)->name('book-flight');
     Route::get('/flights', ViewFlights::class)->name('flights');
+    
+    Route::get('create/create-booking', CreateBooking::class)->name('create-booking');
+
 });
 
 
