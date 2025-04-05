@@ -1,0 +1,6 @@
+INSERT INTO `flights` (`flight_number`, `origin`, `destination`, `departure_date`, `price`, `created_at`, `updated_at`) VALUES
+('FL123', 'New York', 'Los Angeles', '2025-04-10', 299.99, NOW(), NOW()),
+('FL456', 'Chicago', 'Miami', '2025-04-12', 199.49, NOW(), NOW()),
+('FL789', 'San Francisco', 'Seattle', '2025-04-15', 149.75, NOW(), NOW()),
+('FL321', 'Dallas', 'Denver', '2025-04-18', 179.00, NOW(), NOW()),
+('FL654', 'Boston', 'Atlanta', '2025-04-20', 220.30, NOW(), NOW());
